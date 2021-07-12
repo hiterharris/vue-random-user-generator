@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Vue Intro</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="styles.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="app">
+			<img
+			  v-bind:src="picture"
+			  :alt="`${firstName} ${lastName}`"
+			  :class="gender"
+			/>
+			<h1>{{firstName}} {{lastName}}</h1>
+			<h3>Email: {{email}}</h3>
+			<button  v-on:click="getUser()" :class="gender" @click="getUser()">Get Random User</button>
+		  </div>
+
+        <script src="https://unpkg.com/vue@3.0.5"></script>
+		<script type="module" src="app.js"></script>
+	</body>
+</html>
